@@ -208,16 +208,6 @@ class Torus {
     if (dappStorageKey) {
       torusIframeUrl.hash = `#dappStorageKey=${dappStorageKey}`;
     }
-    // Iframe code
-    this.torusIframe = htmlToElement<HTMLIFrameElement>(
-      `<iframe
-        id="torusIframe"
-        class="torusIframe"
-        src="${torusIframeUrl.href}"
-        style="display: none; position: fixed; top: 0; right: 0; width: 100%;
-        height: 100%; border: none; border-radius: 0; z-index: ${this.modalZIndex}"
-      ></iframe>`
-    );
 
     this.torusAlertContainer = htmlToElement<HTMLDivElement>('<div id="torusAlertContainer"></div>');
     this.torusAlertContainer.style.display = "none";
